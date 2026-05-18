@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Joe's House | Bar &amp; Grill · Millwood, WA — A Spokane Hidden Gem</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bark: #211611;
+  --bark-2: #2F2018;
+  --cream: #FBF4E9;
+  --cream-2: #F2E7D3;
+  --line: #DBC9AC;
+  --muted: #8A7659;
+  --rust: #C0532B;
+  --rust-bright: #DD6A38;
+  --honey: #D99A3C;
+  --white: #FFFFFF;
+}
+body { background: var(--cream); color: var(--bark); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: Georgia, 'Times New Roman', serif; }
+
+nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 56px; position: absolute; top: 0; left: 0; right: 0; z-index: 50; }
+.nav-logo { font-family: Georgia, serif; font-size: 25px; font-weight: 700; letter-spacing: 0.5px; color: var(--cream); }
+.nav-logo span { color: var(--honey); }
+.nav-links { display: flex; gap: 36px; }
+.nav-links a { font-size: 13px; letter-spacing: 1.5px; color: rgba(251,244,233,0.8); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: var(--honey); }
+.nav-cta { font-size: 13px; letter-spacing: 1.5px; color: var(--bark); background: var(--honey); text-decoration: none; text-transform: uppercase; padding: 12px 24px; border-radius: 2px; font-weight: 700; transition: all 0.2s; }
+.nav-cta:hover { background: var(--cream); }
+
+.hero { min-height: 100vh; background: var(--bark); display: flex; align-items: center; padding: 120px 56px 80px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background:
+  radial-gradient(circle at 78% 25%, rgba(192,83,43,0.2), transparent 45%),
+  radial-gradient(circle at 12% 85%, rgba(217,154,60,0.12), transparent 42%); }
+.hero-inner { max-width: 1080px; position: relative; z-index: 2; }
+.hero-eyebrow { font-size: 12px; letter-spacing: 5px; color: var(--honey); text-transform: uppercase; margin-bottom: 26px; opacity: 0; animation: rise 0.9s ease forwards; }
+.hero h1 { font-family: Georgia, serif; font-size: 80px; line-height: 1.05; color: var(--cream); font-weight: 700; letter-spacing: -1px; margin-bottom: 28px; max-width: 860px; opacity: 0; animation: rise 0.9s ease 0.15s forwards; }
+.hero h1 em { color: var(--honey); font-style: italic; }
+.hero p { font-size: 19px; line-height: 1.8; color: rgba(251,244,233,0.72); max-width: 540px; margin-bottom: 40px; opacity: 0; animation: rise 0.9s ease 0.3s forwards; }
+.hero-btns { display: flex; gap: 15px; flex-wrap: wrap; opacity: 0; animation: rise 0.9s ease 0.45s forwards; }
+.btn-rust { display: inline-block; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--white); background: var(--rust); padding: 17px 38px; text-decoration: none; border-radius: 2px; font-weight: 700; transition: all 0.2s; }
+.btn-rust:hover { background: var(--rust-bright); transform: translateY(-2px); }
+.btn-ghost { display: inline-block; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--cream); border: 1px solid rgba(251,244,233,0.35); padding: 17px 38px; text-decoration: none; border-radius: 2px; transition: all 0.2s; }
+.btn-ghost:hover { border-color: var(--honey); color: var(--honey); }
+.hero-meta { display: flex; gap: 38px; margin-top: 54px; flex-wrap: wrap; opacity: 0; animation: rise 0.9s ease 0.6s forwards; }
+.hero-meta-item { font-size: 13px; color: rgba(251,244,233,0.6); letter-spacing: 0.5px; }
+.hero-meta-item strong { display: block; font-family: Georgia, serif; font-size: 23px; color: var(--cream); margin-bottom: 4px; }
+@keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.85s ease, transform 0.85s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+.section { padding: 125px 56px; }
+.section-cream2 { background: var(--cream-2); }
+.eyebrow { font-size: 12px; letter-spacing: 5px; color: var(--rust); text-transform: uppercase; margin-bottom: 24px; font-weight: 700; }
+.section h2 { font-family: Georgia, serif; font-size: 52px; font-weight: 700; line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 24px; max-width: 720px; }
+.lead { font-size: 19px; line-height: 1.85; color: var(--muted); max-width: 600px; }
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 76px; align-items: center; margin-top: 58px; }
+.split-visual { aspect-ratio: 4/5; background: linear-gradient(160deg, #2F2018, #211611); border: 1px solid rgba(217,154,60,0.22); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 40px; }
+.split-visual::after { content: ''; position: absolute; inset: 18px; border: 1px dashed rgba(192,83,43,0.4); border-radius: 4px; }
+.split-visual .ph-ico { width: 54px; height: 54px; margin-bottom: 18px; position: relative; z-index: 2; }
+.split-visual .ph-ico svg { width: 100%; height: 100%; stroke: rgba(217,154,60,0.6); }
+.split-visual .ph-t { font-family: Georgia, serif; font-size: 23px; color: rgba(251,244,233,0.72); position: relative; z-index: 2; font-style: italic; margin-bottom: 7px; text-align: center; }
+.split-visual .ph-s { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(251,244,233,0.4); position: relative; z-index: 2; text-align: center; }
+.split-text .pull { font-family: Georgia, serif; font-size: 25px; font-style: italic; color: var(--bark); line-height: 1.55; margin-bottom: 26px; }
+.split-text p { font-size: 18px; line-height: 1.9; color: var(--muted); margin-bottom: 24px; }
+
+.menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 60px; }
+.menu-item { background: var(--cream); padding: 38px 40px; }
+.menu-item-top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 10px; }
+.menu-item-name { font-family: Georgia, serif; font-size: 22px; font-weight: 700; color: var(--bark); }
+.menu-item-price { font-family: Georgia, serif; font-size: 17px; color: var(--rust); white-space: nowrap; }
+.menu-item-desc { font-size: 14px; line-height: 1.7; color: var(--muted); }
+.menu-tag { display: inline-block; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--rust); border: 1px solid var(--rust); padding: 3px 9px; border-radius: 2px; margin-top: 14px; }
+
+.band { background: var(--bark); padding: 110px 56px; text-align: center; position: relative; overflow: hidden; }
+.band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(192,83,43,0.18), transparent 55%); }
+.band-inner { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+.band h2 { font-family: Georgia, serif; font-size: 50px; font-weight: 700; color: var(--cream); margin-bottom: 20px; line-height: 1.12; }
+.band h2 em { color: var(--honey); font-style: italic; }
+.band p { font-size: 18px; color: rgba(251,244,233,0.7); line-height: 1.8; margin-bottom: 38px; }
+
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; margin-top: 58px; }
+.hours-row { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.hours-row:last-child { border-bottom: none; }
+.hours-day { color: var(--bark); font-weight: 600; }
+.hours-time { color: var(--muted); }
+.visit-info { font-size: 16px; line-height: 2; color: var(--bark); }
+.visit-info strong { display: block; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--rust); margin-bottom: 4px; margin-top: 22px; font-weight: 700; }
+.visit-info strong:first-child { margin-top: 0; }
+.visit-info a { color: var(--bark); text-decoration: none; border-bottom: 1px solid var(--line); }
+.visit-info a:hover { border-color: var(--rust); }
+.map-wrap { border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 30px; }
+.map-wrap iframe { width: 100%; height: 280px; border: none; display: block; }
+
+.cta { background: var(--rust); padding: 130px 56px; text-align: center; }
+.cta h2 { font-family: Georgia, serif; font-size: 58px; font-weight: 700; color: var(--white); letter-spacing: -1px; margin-bottom: 22px; max-width: 760px; margin-left: auto; margin-right: auto; line-height: 1.12; }
+.cta p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 40px; }
+.cta .btn-bark { display: inline-block; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--cream); background: var(--bark); padding: 19px 46px; text-decoration: none; border-radius: 2px; font-weight: 700; transition: all 0.2s; }
+.cta .btn-bark:hover { transform: translateY(-2px); }
+
+footer { background: var(--bark); border-top: 1px solid rgba(217,154,60,0.18); padding: 56px 56px 32px; }
+.footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 34px; margin-bottom: 44px; }
+.footer-logo { font-family: Georgia, serif; font-size: 23px; font-weight: 700; color: var(--cream); }
+.footer-logo span { color: var(--honey); }
+.footer-links { display: flex; gap: 44px; flex-wrap: wrap; }
+.footer-col h4 { font-size: 11px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 16px; }
+.footer-col a { display: block; font-size: 13px; color: rgba(251,244,233,0.6); text-decoration: none; margin-bottom: 11px; transition: color 0.2s; }
+.footer-col a:hover { color: var(--honey); }
+.footer-bottom { border-top: 1px solid rgba(217,154,60,0.15); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.footer-bottom p { font-size: 12px; color: var(--muted); }
+
+@media (max-width: 860px) {
+  nav { padding: 18px 22px; } .nav-links { display: none; }
+  .hero { padding: 100px 22px 60px; } .hero h1 { font-size: 42px; }
+  .section { padding: 70px 22px; } .section h2 { font-size: 32px; }
+  .band { padding: 70px 22px; } .band h2 { font-size: 30px; }
+  .cta { padding: 80px 22px; } .cta h2 { font-size: 34px; }
+  .split, .visit-grid { grid-template-columns: 1fr; gap: 40px; }
+  .menu-grid { grid-template-columns: 1fr; }
+  footer { padding: 44px 22px 28px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo serif">Joe's <span>House</span></div>
+  <div class="nav-links">
+    <a href="#about">Our Story</a>
+    <a href="#menu">The Food</a>
+    <a href="#gameday">Game Day</a>
+    <a href="#visit">Visit</a>
+  </div>
+  <a class="nav-cta" href="tel:15094749713">Call (509) 474-9713</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Bar &amp; Grill · Millwood, WA</div>
+    <h1>You come in a guest. You leave <em>family.</em></h1>
+    <p>A Spokane-area hidden gem where Joe and Juan put real love into every plate — and somehow everyone who walks in becomes a regular.</p>
+    <div class="hero-btns">
+      <a class="btn-rust" href="#menu">See the Food</a>
+      <a class="btn-ghost" href="#visit">Find Us</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><strong>4.8★</strong>362 Google reviews</div>
+      <div class="hero-meta-item"><strong>Millwood</strong>3117 N Argonne Rd</div>
+      <div class="hero-meta-item"><strong>A True Gem</strong>Hidden in Spokane</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="reveal">
+    <div class="eyebrow">Our Story</div>
+    <h2>One of the greatest hidden gems in Spokane.</h2>
+    <p class="lead">Small spot, huge heart. Joe and Juan are usually on site because they love what they do — and it shows in the food, the room, and every person who walks back out grinning.</p>
+  </div>
+  <div class="split">
+    <div class="split-visual reveal">
+      <div class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+      <div class="ph-t">Your photos here</div>
+      <div class="ph-s">The food · the patio · Joe &amp; the crew</div>
+    </div>
+    <div class="split-text reveal">
+      <div class="pull">"They make sure you feel like part of the Joe's House family. The food, drinks, and staff make it a blast."</div>
+      <p>From the famous Southwest Sauce to the brisket street tacos, this is a place that does the small things with real care. Grab a seat inside, settle in at the bar, or take the patio with friends.</p>
+      <p>Whatever's good in town, locals will tell you the same thing — go to Joe's House. You'll leave planning the next visit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-cream2" id="menu">
+  <div class="reveal">
+    <div class="eyebrow">The Food</div>
+    <h2>The dishes people rave about.</h2>
+    <p class="lead">These are the ones that come up again and again in the reviews. Full menu in-house — start here.</p>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-item reveal">
+      <div class="menu-item-top"><div class="menu-item-name">Brisket Street Tacos</div><div class="menu-item-price">Ask in-house</div></div>
+      <div class="menu-item-desc">The one regulars bring every out-of-town guest for. Tender brisket, the famous Southwest Sauce, gone in a flash.</div>
+      <span class="menu-tag">House Favorite</span>
+    </div>
+    <div class="menu-item reveal">
+      <div class="menu-item-top"><div class="menu-item-name">Southwestern Chicken</div><div class="menu-item-price">Ask in-house</div></div>
+      <div class="menu-item-desc">A go-to for a reason. Big flavor, done right every single time — a true regular's order.</div>
+      <span class="menu-tag">Regulars' Pick</span>
+    </div>
+    <div class="menu-item reveal">
+      <div class="menu-item-top"><div class="menu-item-name">The Corn Dip</div><div class="menu-item-price">Ask in-house</div></div>
+      <div class="menu-item-desc">"AMAZING," in the exact words of the reviews. The starter you didn't know you needed. Don't skip it.</div>
+    </div>
+    <div class="menu-item reveal">
+      <div class="menu-item-top"><div class="menu-item-name">Mexican Pizza</div><div class="menu-item-price">Ask in-house</div></div>
+      <div class="menu-item-desc">One of the most-named dishes in town. That Southwest Sauce makes it something people drive back for.</div>
+      <span class="menu-tag">Crowd Favorite</span>
+    </div>
+    <div class="menu-item reveal">
+      <div class="menu-item-top"><div class="menu-item-name">The "Adult" Grilled Cheese</div><div class="menu-item-price">Ask in-house</div></div>
+      <div class="menu-item-desc">Called "the best I've ever had" by a regular. Comfort food, leveled all the way up.</div>
+    </div>
+    <div class="menu-item reveal">
+      <div class="menu-item-top"><div class="menu-item-name">Loaded Nachos</div><div class="menu-item-price">Ask in-house</div></div>
+      <div class="menu-item-desc">"The nachos are a must." Built to share over a few drinks and a lot of laughs.</div>
+      <span class="menu-tag">Shareable</span>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="gameday">
+  <div class="band-inner reveal">
+    <div class="eyebrow" style="color:var(--honey)">Good Times at Joe's House</div>
+    <h2>Catch the game. Stay for the <em>family.</em></h2>
+    <p>A great spot to watch the game, grab a seat with friends, or head out to the patio when the weather's right. Good drinks, great food, and the kind of room you don't want to leave.</p>
+    <a class="btn-rust" href="tel:15094749713" style="background:var(--honey);color:var(--bark);">Call Ahead — (509) 474-9713</a>
+  </div>
+</section>
+
+<section class="section" id="visit">
+  <div class="reveal">
+    <div class="eyebrow">Visit Us</div>
+    <h2>Find us in Millwood.</h2>
+  </div>
+  <div class="visit-grid">
+    <div class="reveal">
+      <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">4:00 – 9:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">4:00 – 10:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">4:00 – 10:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">4:00 – 10:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">12:00 PM – 12:00 AM</span></div>
+      <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">12:00 PM – 12:00 AM</span></div>
+      <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">12:00 – 7:00 PM</span></div>
+    </div>
+    <div class="reveal">
+      <div class="visit-info">
+        <strong>Address</strong>
+        3117 N Argonne Rd, Millwood, WA 99212
+        <strong>Phone</strong>
+        <a href="tel:15094749713">(509) 474-9713</a>
+        <strong>The Spot</strong>
+        Extra parking on the corner · patio seating
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://maps.google.com/maps?q=3117+N+Argonne+Rd,+Millwood,+WA+99212&t=&z=16&ie=UTF8&iwloc=&output=embed" title="Joe's House location" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Come be part of the family.</h2>
+  <p>Millwood's hidden gem. Great food, good drinks, and a seat with your name on it.</p>
+  <a class="btn-bark" href="tel:15094749713">Call (509) 474-9713</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo serif">Joe's <span>House</span></div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <a href="#about">Our Story</a>
+        <a href="#menu">The Food</a>
+        <a href="#gameday">Game Day</a>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <a href="#visit">Hours</a>
+        <a href="https://maps.google.com/maps?q=3117+N+Argonne+Rd,+Millwood,+WA+99212" target="_blank">Directions</a>
+        <a href="tel:15094749713">Call</a>
+      </div>
+      <div class="footer-col">
+        <h4>Social</h4>
+        <a href="https://www.facebook.com/joeshousemillwood/" target="_blank">Facebook</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Joe's House · 3117 N Argonne Rd, Millwood, WA</p>
+    <p>Bar &amp; Grill · A Spokane Hidden Gem</p>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
